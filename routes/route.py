@@ -20,7 +20,7 @@ async def post_todo(todo: Todo):
 
 #PUT Request Method
 @router.put("/")
-async def put_toddo(id: str, todo: Todo):
+async def put_todo(id: str, todo: Todo):
     collection_name.find_one_and_update({"_id": ObjectId(id)}, {"set": dict(todo)})
 
 # Delete Request Method
